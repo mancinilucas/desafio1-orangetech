@@ -37,6 +37,22 @@ public class Bootcamp {
         return dataFinal;
     }
 
+    public Set<Dev> getDevsInscritos() {
+        return devsInscritos;
+    }
+
+    public void setDevsInscritos(Set<Dev> devsInscritos) {
+        this.devsInscritos = devsInscritos;
+    }
+
+    public Set<Conteudo> getConteudos() {
+        return conteudos;
+    }
+
+    public void setConteudos(Set<Conteudo> conteudos) {
+        this.conteudos = conteudos;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
