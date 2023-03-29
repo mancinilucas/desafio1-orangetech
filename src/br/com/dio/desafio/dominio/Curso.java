@@ -1,41 +1,14 @@
 package br.com.dio.desafio.dominio;
 
 public class Curso extends Conteudo {
-    private String titulo;
-    private String descricao;
     private Integer cargaHoraria;
 
     public Curso(){}
 
-    public Curso(String titulo, String descricao, Integer cargaHoraria) {
-        this.titulo = titulo;
-        this.descricao = descricao;
-        this.cargaHoraria = cargaHoraria;
-    }
 
     @Override
     public double calcularXP() {
         return XP_PADRAO * cargaHoraria;
-    }
-
-    @Override
-    public String getTitulo() {
-        return titulo;
-    }
-
-    @Override
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    @Override
-    public String getDescricao() {
-        return descricao;
-    }
-
-    @Override
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
     }
 
     public Integer getCargaHoraria() {
@@ -49,22 +22,9 @@ public class Curso extends Conteudo {
     @Override
     public String toString() {
         return "Curso{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", carga horaria=" + cargaHoraria +
+                "Titulo='" + getTitulo() + '\''+
+                ", Descricao='" + getDescricao() + '\''+
+                ", Carga Horaria=" + cargaHoraria +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Curso curso)) return false;
-
-        return getTitulo().equals(curso.getTitulo());
-    }
-
-    @Override
-    public int hashCode() {
-        return getTitulo().hashCode();
     }
 }
